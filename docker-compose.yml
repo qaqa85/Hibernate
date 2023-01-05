@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  mySQL:
+    image: mysql:8.0.31
+    volumes:
+      - mySQL:/var/lib/mysql
+    ports:
+      - '8090:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: example
+    networks:
+      - sqlNetwork
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - '8091:8080'
+    networks:
+      - sqlNetwork
+    depends_on:
+      - mySQL
+
+volumes:
+  mySQL:
+    name: mysql_volume
+networks:
+  sqlNetwork:
+    driver: bridge

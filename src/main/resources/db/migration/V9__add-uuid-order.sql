@@ -1,0 +1,1 @@
+ALTER TABLE `order` ADD COLUMN uuid VARCHAR(36) NULL AFTER total;

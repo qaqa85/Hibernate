@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id "org.flywaydb.flyway" version "8.2.0"
+}
+
+group 'pl.nullpointerexception.hibernate'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+    implementation 'org.hibernate:hibernate-core:6.1.6.Final'
+// https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-c3p0
+    implementation 'org.hibernate.orm:hibernate-c3p0:6.1.6.Final'
+// https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
+// https://mvnrepository.com/artifact/org.flywaydb/flyway-core
+    implementation 'org.flywaydb:flyway-core:8.2.0'
+    // https://mvnrepository.com/artifact/org.flywaydb/flyway-sqlserver
+    implementation 'org.flywaydb:flyway-sqlserver:8.2.0'
+    implementation 'org.hibernate:hibernate-jcache:6.1.6.Final'
+    implementation 'org.ehcache:ehcache:3.10.6'
+
+    runtimeOnly 'mysql:mysql-connector-java:8.0.30'
+
+    annotationProcessor "org.hibernate.orm:hibernate-jpamodelgen:6.1.6.Final"
+}
+
+flyway {
+    url = 'jdbc:mysql://localhost:8090/example'
+    user = 'admin'
+    password = 'password'
+//    locations = ['classpath:db/migration']
+}

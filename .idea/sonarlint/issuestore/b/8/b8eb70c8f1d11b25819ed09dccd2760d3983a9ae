@@ -1,0 +1,16 @@
+
+R
+java:S2629&"7Use the built-in formatting to construct this argument.(¸ßëàúÿÿÿÿ
+Q
+java:S3416"6Update this logger to use "App24MultiMultiJoin.class".(´Ú“¹ùÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(áÅœÉ
+\
+java:S3457&"AFormat specifiers should be used instead of string concatenation.(¸ßëàúÿÿÿÿ
+Q	java:S125)"<This block of commented-out lines of code should be removed.(¡•§Ù
+l
+java:S1128
+"JRemove this unused import 'pl.nullpointerexception.query.entity.Customer'.(‹¯ùÀûÿÿÿÿ8ìôÑ•Ö0
+d
+java:S1128"GRemove this unused import 'pl.nullpointerexception.query.entity.Order'.(ÆˆÍ8ìôÑ•Ö0
+k
+java:S1128"IRemove this unused import 'pl.nullpointerexception.query.entity.Product'.(Ã—Äïÿÿÿÿÿ8ìôÑ•Ö0

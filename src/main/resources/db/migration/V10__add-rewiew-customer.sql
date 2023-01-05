@@ -1,0 +1,3 @@
+ALTER TABLE review ADD COLUMN customer_id BIGINT NULL AFTER rating;
+ALTER TABLE review ADD CONSTRAINT fk_review_customer_id FOREIGN KEY (customer_id) REFERENCES customer(id)
+ON DELETE NO ACTION ON UPDATE NO ACTION;
